@@ -1,0 +1,16 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var Escuela_1 = require("./models/Escuela");
+var Profesor_1 = require("./models/Profesor");
+var Alumno_1 = require("./models/Alumno");
+var escuela = new Escuela_1.Escuela();
+var profesor1 = new Profesor_1.Profesor("Sr. Espinoza");
+var alumno1 = new Alumno_1.Alumno("Franco", 8);
+var alumno2 = new Alumno_1.Alumno("Micaela", 6);
+escuela.matricularAlumno(alumno1);
+escuela.matricularAlumno(alumno2);
+escuela.contratarProfesor(profesor1);
+profesor1.agregarAlumno(alumno1);
+profesor1.agregarAlumno(alumno2);
+console.log(alumno1.nombre, "está aprobado:", alumno1.estaAprobado());
+console.log(alumno2.nombre, "está aprobado:", alumno2.estaAprobado());
