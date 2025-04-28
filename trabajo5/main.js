@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var Profesor_1 = require("./Profesor");
+var Estudiante_1 = require("./Estudiante");
+var Curso_1 = require("./Curso");
+var profe1 = new Profesor_1.Profesor("Laura");
+var est1 = new Estudiante_1.Estudiante("Carlos");
+var est2 = new Estudiante_1.Estudiante("Marta");
+var cursoPintura = new Curso_1.Curso("Pintura Moderna", profe1);
+cursoPintura.agregarParticipante(est1);
+cursoPintura.agregarParticipante(est2);
+cursoPintura.mostrarCursoInfo();
